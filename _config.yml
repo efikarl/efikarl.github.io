@@ -1,0 +1,13 @@
+title: 尔非卡尔
+description: LiuYi
+
+collections:
+  ipost:
+    output: true
+    permalink: /:collection/:year-:month-:day/:title.html
+
+sass:
+    sass_dir: stylesheets/scss
+
+url: http://efikarl.com
+e-mail: efikarl@icloud.com

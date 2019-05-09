@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="post">
+
+
+  <h2 class="post-title">{{ page.title }}</h2>
+
+  <div class="post-info">
+    <p class="post-attri">
+        <span class="post-tags">{{ page.tags }}</span> <span class="post-date">{{ page.date | date:"%Y-%m-%d" }}</span>
+    </p>
+    <h4 class="post-intro">{{ page.introduction }}</h4>
+  </div>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  <div class="post-share">
+    <span>分享:</span> <i class="fa fa-wechat"></i>
+  </div>
+
+  <nav class="post-navi-pn">
+    {% if page.previous %}
+    <a class="post-prev" rel="prev" href="{{ page.previous.url }}" data-hover="{{ page.previous.title }}">上</a>
+    {% endif %}
+
+    {% if page.next %}
+    <a class="post-next" rel="next" href="{{ page.next.url }}" data-hover="{{ page.next.title }}">下</a>
+    {% endif %}
+  </nav>
+
+  <nav class="post-navi-bt">
+    <a class="post-backtop" href="javascript:window.scrollTo(0, 0)">
+      <i class="fa fa-angle-double-up"></i>
+    </a>
+  </nav>
+</div>

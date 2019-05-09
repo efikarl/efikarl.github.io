@@ -1,0 +1,6 @@
+/_site
+/.sass-cache
+/.asset-cache
+/prose
+
+.DS_Store

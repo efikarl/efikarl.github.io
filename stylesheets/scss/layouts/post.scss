@@ -1,0 +1,100 @@
+.post {
+  @include position-r(auto, auto, 2rem 5%, auto auto 1.75rem auto, block);
+  box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
+  border-radius: 0.25rem;
+  .post-title {
+    color: $title;
+  }
+  .post-title {
+    display: block;
+    padding: 0.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+    @include device($desktop) {
+      padding: 1rem;
+    }
+  }
+  .post-info {
+    .post-attri {
+      @include position-r(auto, auto, .25rem .25rem, auto, block);
+      font-size: .5rem; font-style: italic;
+      letter-spacing: 2px; text-align: right; text-transform: uppercase;
+      z-index: -1;
+      .post-tags {
+        display: inline-block;
+        padding: .25rem;
+        color: black;
+        border-radius: .25rem;
+        box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+        background: linear-gradient(180deg, $title, $link);
+      }
+      .post-date {
+        display: inline-block;
+        padding: .25rem;
+        color: white;
+        border-radius: .25rem;
+        box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+        background: linear-gradient(180deg, $lv1, $lv2);
+      }
+    }
+  }
+
+  .post-content {
+    text-align: justify;
+    p {
+      text-indent: 2rem * 0.75;
+      letter-spacing: 0.125px * 0.75;
+      @include device($desktop) {
+        text-indent: 2rem;
+        letter-spacing: 0.125px;
+      }
+    }
+    blockquote {
+      @include position-r(auto, auto, 1px 0, 2px 0, block);
+      font-style: italic;
+      background: rgba(#99ccff, 0.1);
+      border-left: 0.25em solid green;
+    }
+    .footnotes {
+      font-family: Monaco, Consolas; font-style: italic; font-size: 0.75rem; color: $lv2;
+      list-style: url('rocket.svg');
+    }
+  }
+
+
+  .post-share {
+    @include position-r(auto, auto, auto, auto, none);
+  }
+
+  .post-navi-pn {
+    @include position-r(auto, auto, 0.75rem, auto, block);
+    display: block;
+    font-size: 0.75rem;
+    border-radius: .25rem;
+    box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+    @include device($desktop) {
+      @include position-r(auto, auto, 1rem, auto, block);
+      font-size: 1rem;
+    }
+    .post-prev {
+      @include position-a(.25rem, auto, auto, .5rem, block);
+    }
+    .post-next {
+      @include position-a(.25rem, .5rem, auto, auto, block);
+    }
+  }
+
+  .post-navi-bt {
+    .post-backtop {
+      position: fixed; display: block; text-align: center; background: $lv1;
+      right: 6.25% * 0.75; bottom: 6.25% * 0.75;
+      font-size: 1.5rem * 0.75;
+      width: 2rem * 0.75; height: 2rem * 0.75; border-radius: 50%;
+      @include device($desktop) {
+        right: 6.25%; bottom: 6.25%;
+        font-size: 1.5rem;
+        width: 2rem; height: 2rem; border-radius: 50%;
+      }
+    }
+  }
+}

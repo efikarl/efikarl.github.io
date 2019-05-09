@@ -1,0 +1,22 @@
+---
+layout: default
+title: ipost
+route: ipost
+---
+<div class="ipost">
+  <div class="ipost-head">
+  </div>
+
+<div class="ipost-info">
+  <dl>
+  {% for post in site.ipost %}
+  <a class="ipost-list" href="{{ post.url }}">
+    <span class="ipost-date">{{ post.date | date:"%Y-%m-%d" }}</span>
+    <span class="ipost-title">{{ post.title }}</span>
+    <span class="ipost-tags">{{ post.tags }}</span>
+  </a>
+  {% endfor %}
+  </dl>
+</div>
+
+</div>

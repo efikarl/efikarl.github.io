@@ -1,0 +1,50 @@
+<header class="header">
+  <a class="logo {% if page.route == 'index' %}active{% endif %}" href="/">
+    <span class="a"></span>
+    <span class="b"></span>
+    <span class="c"></span>
+    <span class="d"></span>
+    <span class="e"></span>
+    <span class="f"></span>
+    <span class="g"></span>
+    <span class="h"></span>
+    <span class="i"></span>
+    <span class="j"></span>
+    <span class="k"></span>
+  </a>
+
+  <a id="toggle-menu" class="toggle toggle-menu" href="#" data-target="menu">
+    <span class="fa fa-bars"></span>
+  </a>
+
+  <a id="toggle-else" class="toggle toggle-else" href="#" data-target="else">
+    <span class="fa fa-angle-down"></span>
+  </a>
+
+  <div id="reset" class="reset"></div>
+
+  <ul id="menu" class="dropdown dropdown-menu">
+    <li>
+      <a {% if page.route=='index' %}class="active" {% endif %} href="/">尔非卡尔</a>
+    </li>
+    <li>
+      <a {% if page.route=='ipost' %}class="active" {% endif %} href="/ipost.html">博客</a>
+    </li>
+    <li>
+      <a href="mailto:{{ site.e-mail }}">邮件</a>
+    </li>
+  </ul>
+
+  <ul id="else" class="dropdown dropdown-else">
+    <li>
+      <a class="github" href="https://github.com/efikarl">
+        <span class="fa fa-github"></span>
+      </a>
+    </li>
+    <li>
+      <a class="rss" href="/atom.xml">
+        <span class="fa fa-rss"></span>
+      </a>
+    </li>
+  </ul>
+</header>

@@ -1,8 +1,8 @@
 ---
-title: "驱动设计01 -- 复位向量"
-layout: post
-date: 2018-10-08 10:35:52 +800
-tags: bios.pi.sec
+title   : "驱动设计01 -- 复位向量"
+layout  : post
+date    : 2018-10-08 10:35:52 +800
+tags    : uefi.reset-vector
 ---
 ### 1. 需求分析
 

@@ -49,6 +49,13 @@
         letter-spacing: 0.125px;
       }
     }
+    ul, ol {
+      li {
+        p {
+          text-indent: 0px;
+        }
+      }
+    }
     blockquote {
       @include position-r(auto, auto, 1px 0, 2px 0, block);
       font-style: italic;
@@ -56,8 +63,7 @@
       border-left: 0.25em solid green;
     }
     .footnotes {
-      font-family: Monaco, Consolas; font-style: italic; font-size: 0.75rem; color: $lv2;
-      list-style: url('rocket.svg');
+      font-family: Calibri, Monaco, Consolas; font-size: 0.75rem; color: $lv2;
     }
   }
 

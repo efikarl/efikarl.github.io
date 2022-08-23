@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 
   var $c = $('#contact a');
   var t = 'efikarl:'
-  var m = 'efikarl@163.com';
+  var m = 'efikarl@yeah.com';
   $c.attr('href', R(t + m));
 
   var $toggle = $('.toggle');
@@ -41,15 +41,4 @@ jQuery(document).ready(function ($) {
   $reset.click(function () {
     $('html').removeClass('menu-open else-open');
   });
-
-  $('img.lazy').lazy();
-
-  $('.period').each(function () {
-    $(this).affix({
-      offset: {
-        top: $(this).offset().top
-      }
-    });
-  });
-
 });

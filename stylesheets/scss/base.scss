@@ -67,6 +67,10 @@ h1, h2, h3, h4, h5, h6, strong {
   width: 75%; height: auto; padding: 0; margin: 50px auto;
   }
 
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
   code {
     font-family: Menlo, Consolas;
     font-size: 0.875rem;

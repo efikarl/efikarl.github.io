@@ -2,14 +2,10 @@
   @include position-r(auto, auto, 2rem 5%, auto auto 1.75rem auto, block);
   box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
   border-radius: 0.25rem;
+
   .post-title {
-    color: $title;
-  }
-  .post-title {
-    display: block;
-    padding: 0.5rem;
-    border-radius: .25rem;
     box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+    padding: 0.5rem;
     @include device($desktop) {
       padding: 1rem;
     }
@@ -56,14 +52,70 @@
         }
       }
     }
+    table, blockquote {
+      font-family: Calibri; font-size: 0.75rem; color: $lv2;
+      padding: 0.25rem 1rem;
+      p {
+        text-indent: 0rem; font-size: 0.75rem;
+      }
+    }
+    table {
+      table-layout : fixed; margin: 0 auto; width: 95%;
+      box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
+      thead {
+        color: $github;
+      }
+      tbody {
+        color: $github;
+      }
+      tr {
+        th {
+          width: auto;
+          background-color: $bgth;
+          padding: 0.25rem 1rem;
+          color: $rss;
+          overflow: auto;
+        }
+        td {
+          width: auto;
+          background-color: $bgtd;
+          padding: 0.25rem 1rem;
+          &:first-child {
+            color: $wechat;
+          }
+          color: $github;
+          overflow: auto;
+        }
+      }
+    }
     blockquote {
-      @include position-r(auto, auto, 1px 0, 2px 0, block);
-      font-style: italic;
+      table-layout : fixed; margin: 0 auto; width: 100%;
+      padding: 0.25rem 0.25rem;
       background: rgba(#99ccff, 0.1);
       border-left: 0.25em solid green;
     }
+    .highlight {
+      table-layout : fixed; margin: 0.25rem auto; width: 95%;
+      padding: 0.25rem 0rem;
+      p {
+        text-indent: 0rem; font-size: 0.75rem;
+      }
+    }
     .footnotes {
-      font-family: Calibri, Monaco, Consolas; font-size: 0.75rem; color: $lv2;
+      table-layout : fixed; margin: 0 auto; width: 95%;
+      box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+      font-family: "Segoe Script";
+      p {
+        text-align: left; text-indent: 0rem; font-size: 0.75rem;
+      }
+      ol {
+        list-style-type: decimal-leading-zero;
+        li {
+          width: auto;
+          background-color: $bgtd;
+          color: $link;
+        }
+      }
     }
   }
 

@@ -12,9 +12,13 @@ $rss:         #F26522;
 
 $title:       #336699;
 $link:        #00CCFF;
-$text:        black;
+$text:        #000000;
+
+$bgth:        #000000;
+$bgtd:        #FFFFFF;
 
 $desktop: 1024px;
+$desk001: 1600px;
 
 @mixin device ($device) {
   @media screen and (min-width: $device) {
@@ -31,4 +35,3 @@ $desktop: 1024px;
   position: relative; display: $display;
   width: $width; height: $height; padding: $padding; margin: $margin
 }
-

@@ -39,6 +39,100 @@ h1, h2, h3, h4, h5, h6, strong {
   color: $title;
 }
 
+// Setting from Pure.CSS
+
+html {
+  -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse; border-spacing: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block; vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none; height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+
+sup {
+  top   : -.50em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box; height: 0;
+}
+
+pre, textarea {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace; font-size: 1em;
+}
+
+legend,
+td,
+th {
+  padding: 0;
+}
+
 // Blog Layout Setting
 .header {
   width: 75%; height: 48px; padding: 0; margin: 10px auto;
@@ -55,24 +149,23 @@ h1, h2, h3, h4, h5, h6, strong {
   h5 { font-size: 1.125rem * 0.75; }
   h6 { font-size: 1.000rem * 0.75; }
   p, dl, ul, ol { font-size: 1.000rem * 0.75; line-height: 1.25rem * 0.75; }
-  width: 75%; height: auto; padding: 0; margin: 25px auto;
+  @include position-r(75%, auto, 0, 25px auto, block);
+
   @include device($desktop) {
-  h1 { font-size: 2.000rem; }
-  h2 { font-size: 1.500rem; }
-  h3 { font-size: 1.375rem; }
-  h4 { font-size: 1.250rem; }
-  h5 { font-size: 1.125rem; }
-  h6 { font-size: 1.000rem; }
-  p, dl, ul, ol { font-size: 1.000rem; line-height: 1.25rem; }
-  width: 75%; height: auto; padding: 0; margin: 50px auto;
+    h1 { font-size: 2.000rem; }
+    h2 { font-size: 1.500rem; }
+    h3 { font-size: 1.375rem; }
+    h4 { font-size: 1.250rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1.000rem; }
+    p, dl, ul, ol { font-size: 1.000rem; line-height: 1.25rem; }
+    @include position-r(75%, auto, 0, 50px auto, block);
   }
 
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  -webkit-hyphens: none; -ms-hyphens: none; hyphens: none;
 
   code {
-    font-family: Menlo, Consolas;
+    font-family: Consolas, Menlo, Hack, monospace;
     font-size: 0.875rem;
   }
 }

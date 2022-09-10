@@ -7,7 +7,7 @@
     }
   }
   .ipost-list {
-    overflow-x:auto; white-space:nowrap;
+    overflow-x:auto; white-space: nowrap;
     transition: all 5s ease 1s;
     &:hover {
       background: linear-gradient(white, $lv4);

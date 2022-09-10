@@ -1,10 +1,10 @@
 .post {
   @include position-r(auto, auto, 2rem 5%, auto auto 1.75rem auto, block);
-  box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
-  border-radius: 0.25rem;
+  @include ek-box-shadow;
 
   .post-title {
-    box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+    @include ek-box-shadow;
+
     padding: 0.5rem;
     @include device($desktop) {
       padding: 1rem;
@@ -17,20 +17,12 @@
       letter-spacing: 2px; text-align: right; text-transform: uppercase;
       z-index: -1;
       .post-tags {
-        display: inline-block;
-        padding: .25rem;
-        color: black;
-        border-radius: .25rem;
-        box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
-        background: linear-gradient(180deg, $title, $link);
+        display: inline-block; padding: .25rem; @include ek-box-shadow;
+        color: black; background: linear-gradient(180deg, $title, $link);
       }
       .post-date {
-        display: inline-block;
-        padding: .25rem;
-        color: white;
-        border-radius: .25rem;
-        box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
-        background: linear-gradient(180deg, $lv1, $lv2);
+        display: inline-block; padding: .25rem; @include ek-box-shadow;
+        color: white; background: linear-gradient(180deg, $lv1, $lv2);
       }
     }
   }
@@ -38,11 +30,13 @@
   .post-content {
     text-align: justify;
     p {
-      text-indent: 2rem * 0.75;
-      letter-spacing: 0.125px * 0.75;
+      text-indent: 2rem * 0.75; letter-spacing: 0.125px * 0.75;
       @include device($desktop) {
-        text-indent: 2rem;
-        letter-spacing: 0.125px;
+      text-indent: 2rem; letter-spacing: 0.125px;
+      }
+      img {
+        text-align: center; vertical-align: middle; text-indent: 0; letter-spacing: 0;
+        display: table-cell; margin: 0 auto; width: 95%;
       }
     }
     ul, ol {
@@ -53,15 +47,15 @@
       }
     }
     table, blockquote {
-      font-family: Calibri; font-size: 0.75rem; color: $lv2;
+      font-size: 0.75rem; color: $lv2; white-space: nowrap;
       padding: 0.25rem 1rem;
       p {
         text-indent: 0rem; font-size: 0.75rem;
       }
     }
     table {
-      table-layout : fixed; margin: 0 auto; width: 95%;
-      box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
+      table-layout: fixed; margin: 0 auto; width: 95%; @include ek-box-shadow;
+
       thead {
         color: $github;
       }
@@ -71,49 +65,46 @@
       tr {
         th {
           width: auto;
-          background-color: $bgth;
+          background: $bgth;
           padding: 0.25rem 1rem;
           color: $rss;
           overflow: auto;
         }
         td {
           width: auto;
-          background-color: $bgtd;
+          background: $bgtd;
           padding: 0.25rem 1rem;
+          color: $github;
+          overflow: auto;
           &:first-child {
             color: $wechat;
           }
-          color: $github;
-          overflow: auto;
         }
       }
     }
     blockquote {
-      table-layout : fixed; margin: 0 auto; width: 100%;
-      padding: 0.25rem 0.25rem;
-      background: rgba(#99ccff, 0.1);
+      table-layout: fixed; margin: 0.00rem auto; width: 95%; padding: 0.25rem 0.25rem;
+      background : rgba(#99ccff, 0.1);
       border-left: 0.25em solid green;
+      overflow: auto;
     }
     .highlight {
-      table-layout : fixed; margin: 0.25rem auto; width: 95%;
-      padding: 0.25rem 0rem;
+      table-layout: fixed; margin: 0.25rem auto; width: 95%; padding: 0.25rem 0.00rem;
       p {
         text-indent: 0rem; font-size: 0.75rem;
       }
     }
     .footnotes {
-      table-layout : fixed; margin: 0 auto; width: 95%;
+      table-layout: fixed; margin: 0.00rem auto; width: 95%; padding: 0.25rem 0.25rem;
       box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
       font-family: "Segoe Script";
       p {
-        text-align: left; text-indent: 0rem; font-size: 0.75rem;
+        text-align: left; text-indent: 0rem; font-size: 0.5rem;
       }
       ol {
         list-style-type: decimal-leading-zero;
         li {
-          width: auto;
-          background-color: $bgtd;
-          color: $link;
+          background: $bgtd; color: $link;
         }
       }
     }

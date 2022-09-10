@@ -1,4 +1,4 @@
-$font-family-karl: system-ui, -apple-system, "Calibri", sans-serif;
+$font-family-karl: system-ui, -apple-system, sans-serif;
 
 $lv1:         #333333;
 $lv2:         #666666;
@@ -34,4 +34,9 @@ $desk001: 1600px;
 @mixin position-r($width, $height, $padding, $margin, $display) {
   position: relative; display: $display;
   width: $width; height: $height; padding: $padding; margin: $margin
+}
+
+@mixin ek-box-shadow {
+  box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 64, .15);
+  border-radius: 0.25rem;
 }

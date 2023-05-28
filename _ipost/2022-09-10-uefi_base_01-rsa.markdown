@@ -1,8 +1,8 @@
 ---
 title   : "RSA算法的原理与实现"
 layout  : post
-date    : 2020-09-10 15:34:00 +0800
-tags    : algo.crypto.rsa
+date    : 2022-09-10 15:34:00 +0800
+tags    : uefi.crypto.rsa
 ---
 
 今天我们从对称加密算法开始，讨论：为什么需要非对称加密算法，什么是`RAS`算法，相关数学证明，以及个人实现。
@@ -66,24 +66,6 @@ tags    : algo.crypto.rsa
 > φ(n)：`{ n ∈ N+, a ∈ [1,n) }` && `{ S = |a|{(a, n)=1} }` => `φ(n) = |S|`
 >
 > 欧拉定理：若： `a,m ∈ N+`且 `(a,m) == 1`，则：`a^φ(m)≡1(mod m) `。
-
-```
-证明：已知 c = m^e mod n，证明 m = c^d mod n
-
-即证：已知 m^e≡c (mod n)，证明 c^d≡m (mod n)
-若证：c       ^d≡m(mod n)
-即证：(m^e+kn)^d≡m(mod n)
-即证：m^(ed)    ≡m(mod n)
-即证：m^(ed-1)  ≡1(mod n)
-即证：m^φ(n)    ≡1(mod n)
-（1）若 (m,n) == 1，则：符合<欧拉定理>，证毕
-（2）若 (m,n) != 1，则：m = k1*p 或 m = k2*q
-（2.1）假设：m = kp，即证：(kp)^φ(n)≡1(mod n)
-  TODO
-（2.2）假设：m = kq，同理可证
-
-证毕
-```
 
 #### 相关算法
 

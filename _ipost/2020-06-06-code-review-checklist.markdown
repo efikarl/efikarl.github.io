@@ -5,7 +5,7 @@ date    : 2020-06-06 15:00:00 +0800
 tags    : code.review
 ---
 
-本文系博主译文，意译自[ Google 代码评审清单][ Google 代码评审清单]，来者是客，学了再走。
+本文系博主译文，意译自[ Google 代码评审清单][ Google 代码评审清单]。
 
 在考虑每一点时，请务必考虑[代码评审标准](https://efikarl.com/ipost/2020-06-05/code-review-standard.html)。
 

@@ -1,7 +1,7 @@
 ---
-title   : "UEFI-C语言调用约定-X64"
+title   : "UEFI - 调用约定（X64）"
 layout  : post
-date    : 2020-09-05 20:12:00 +0800
+date    : 2022-09-05 20:12:00 +0800
 tags    : uefi.abi.ccc.x64
 ---
 
@@ -14,6 +14,10 @@ tags    : uefi.abi.ccc.x64
 | 命名约定     | [_]function-name                     |
 
 为啥主调函数负责被调函数的栈帧管理？为了支持可变参数。
+
+### 栈帧图示
+
+![1]({{site.url}}/assets/images/2022-09-05/stack-frame.png)
 
 ### 主调函数 `(caller)`
 
@@ -35,7 +39,7 @@ tags    : uefi.abi.ccc.x64
 
 ### 相关表格
 
-实参传递顺序：
+实参传递顺序：（反向：即与标注顺序相反）
 
 | 类型 | 1st  | 2nd  | 3rd  | 4th  | 5th  | + |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

@@ -9,5 +9,9 @@ collections:
 sass:
     sass_dir: stylesheets/scss
 
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 url: http://efikarl.com
 e-mail: efikarl@yeah.com

@@ -1,0 +1,53 @@
+concurrent = 1
+check_interval = 0
+
+[session_server]
+  session_timeout = 1800
+
+[[runners]]
+  name = "build"
+  url = "http://localhost/"
+  token = "GXnnS3uFafDcho1KATaq"
+  executor = "shell"
+  shell = "powershell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+
+[[runners]]
+  name = "hs.build"
+  url = "https://gitlab.icelab.lenovo.com/"
+  token = "63bf048229177a9d68d8247ede1072"
+  executor = "shell"
+  shell = "powershell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+
+[[runners]]
+  name = "build"
+  url = "https://gitlab.icelab.lenovo.com/"
+  token = "889e82441637beab699990d79b01c2"
+  executor = "shell"
+  shell = "powershell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+
+[[runners]]
+  name = "build"
+  url = "http://localhost/"
+  token = "zD1vDBoaCgodzNjA1yz9"
+  executor = "shell"
+  shell = "powershell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]

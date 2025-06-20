@@ -1,0 +1,17 @@
+title: 你好，世界
+description: LiuYi
+
+collections:
+  ipost:
+    output: true
+    permalink: /:collection/:year-:month-:day/:title.html
+
+sass:
+    sass_dir: stylesheets/scss
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
+url: http://efikarl.com
+e-mail: efikarl@yeah.net

@@ -1,0 +1,42 @@
+$font-family-karl: system-ui, -apple-system, sans-serif;
+
+$lv1:         #333333;
+$lv2:         #666666;
+$lv3:         #999999;
+$lv4:         #CCCCCC;
+
+$logo-k:      #404040;
+$wechat:      #62B900;
+$github:      #333333;
+$rss:         #F26522;
+
+$title:       #336699;
+$link:        #00CCFF;
+$text:        #000000;
+
+$bgth:        #000000;
+$bgtd:        #FFFFFF;
+
+$desktop: 1024px;
+$desk001: 1600px;
+
+@mixin device ($device) {
+  @media screen and (min-width: $device) {
+    @content
+  }
+}
+
+@mixin position-a($top, $right, $bottom, $left, $display) {
+  position: absolute; display: $display;
+  top: $top; right: $right; bottom: $bottom; left: $left;
+}
+
+@mixin position-r($width, $height, $padding, $margin, $display) {
+  position: relative; display: $display;
+  width: $width; height: $height; padding: $padding; margin: $margin
+}
+
+@mixin ek-box-shadow {
+  box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 64, .15);
+  border-radius: 0.25rem;
+}

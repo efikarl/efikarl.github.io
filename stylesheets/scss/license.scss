@@ -1,0 +1,27 @@
+.license {
+  @include position-r(auto, auto, 2rem 5%, auto auto 1.75rem auto, block);
+  box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .15), 0 0 0 1px #f0f4f8;
+  border-radius: 0.25rem;
+  text-align: justify;
+  .title {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: .25rem;
+    box-shadow: 0 .25rem .5rem -.1rem rgba(0, 32, 64, .15);
+    @include device($desktop) {
+      padding: 1rem;
+    }
+  }
+  .right {
+    color: #5198C8;
+  }
+  p {
+    line-height: 1.75rem * 0.75;
+    letter-spacing: 0.25px * 0.75;
+    @include device($desktop) {
+      line-height: 1.75rem;
+      letter-spacing: 0.25px;
+    }
+  }
+}
